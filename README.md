@@ -1,0 +1,1 @@
+Quick and dirty Gnome 42 extension to switch input layout by Ctrl+1, Ctrl+2.

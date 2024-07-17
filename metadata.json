@@ -1,0 +1,8 @@
+{
+  "name": "hotkeykblayoutswitcher",
+  "description": "Switch keyboard layout by hotkey.",
+  "uuid": "mykola@palamar.dev",
+  "shell-version": [
+    "42"
+  ]
+}
