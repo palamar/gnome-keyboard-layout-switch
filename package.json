@@ -6,14 +6,14 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/example/my-extension.git"
+    "url": "git+https://github.com/palamar/gnome-keyboard-layout-switch.git"
   },
-  "author": "Mykola Palamar <keyboard-layout-switcher@palamar.dev>",
+  "author": "Mykola Palamar <klsp@palamar.dev>",
   "license": "LGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/example/my-extension/issues"
+    "url": "https://github.com/palamar/gnome-keyboard-layout-switch/issues"
   },
-  "homepage": "https://github.com/example/my-extension#readme",
+  "homepage": "https://github.com/palamar/gnome-keyboard-layout-switch/blob/main/README.md",
   "sideEffects": false,
   "devDependencies": {
     "eslint": "^9.10.0",
