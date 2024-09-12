@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.klsp" path="/org/gnome/shell/extensions/klsp/">
+    <key name="show-indicator" type="b">
+      <default>true</default>
+    </key>
+    <key name="hotkey-lang-us" type="as">
+      <default><![CDATA[['<Ctrl>1']]]></default>
+      <summary>Keybinding to switch to 1 lang</summary>
+      <description>
+        Keybinding to switch to 1 lang.
+      </description>
+    </key>
+    <key name="hotkey-lang-ua" type="as">
+      <default><![CDATA[['<Ctrl>2']]]></default>
+      <summary>Keybinding to switch to 2 lang</summary>
+      <description>
+        Keybinding to switch to 2 lang.
+      </description>
+    </key>
+    <key name="hotkey-lang-se" type="as">
+      <default><![CDATA[['<Ctrl>3']]]></default>
+      <summary>Keybinding to switch to 3 lang</summary>
+      <description>
+        Keybinding to switch to 3 lang.
+      </description>
+    </key>
+    <key name="hotkey-lang-ru" type="as">
+      <default><![CDATA[['<Ctrl>4']]]></default>
+      <summary>Keybinding to switch to 4 lang</summary>
+      <description>
+        Keybinding to switch to 4 lang.
+      </description>
+    </key>
+  </schema>
+</schemalist>
+

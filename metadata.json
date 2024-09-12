@@ -1,8 +1,9 @@
 {
-  "name": "hotkeykblayoutswitcher",
-  "description": "Switch keyboard layout by hotkey.",
-  "uuid": "mykola@palamar.dev",
+  "name": "Keyboard Layout Switcher",
+  "description": "Switch keyboard layouts by hotkeys.",
+  "uuid": "klsp@palamar.dev",
+  "settings-schema": "org.gnome.shell.extensions.klsp",
   "shell-version": [
-    "42"
+    "46"
   ]
 }
