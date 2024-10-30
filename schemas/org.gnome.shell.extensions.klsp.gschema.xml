@@ -4,33 +4,45 @@
     <key name="show-indicator" type="b">
       <default>true</default>
     </key>
-    <key name="hotkey-lang-us" type="as">
+    <key name="hotkey-lang-1" type="as">
       <default><![CDATA[['<Ctrl>1']]]></default>
       <summary>Keybinding to switch to 1 lang</summary>
-      <description>
-        Keybinding to switch to 1 lang.
-      </description>
     </key>
-    <key name="hotkey-lang-ua" type="as">
+    <key name="hotkey-lang-2" type="as">
       <default><![CDATA[['<Ctrl>2']]]></default>
       <summary>Keybinding to switch to 2 lang</summary>
-      <description>
-        Keybinding to switch to 2 lang.
-      </description>
     </key>
-    <key name="hotkey-lang-se" type="as">
+    <key name="hotkey-lang-3" type="as">
       <default><![CDATA[['<Ctrl>3']]]></default>
       <summary>Keybinding to switch to 3 lang</summary>
-      <description>
-        Keybinding to switch to 3 lang.
-      </description>
     </key>
-    <key name="hotkey-lang-ru" type="as">
+    <key name="hotkey-lang-4" type="as">
       <default><![CDATA[['<Ctrl>4']]]></default>
       <summary>Keybinding to switch to 4 lang</summary>
-      <description>
-        Keybinding to switch to 4 lang.
-      </description>
+    </key>
+    <key name="hotkey-lang-5" type="as">
+      <default><![CDATA[['<Ctrl>5']]]></default>
+      <summary>Keybinding to switch to 5 lang</summary>
+    </key>
+    <key name="hotkey-lang-6" type="as">
+      <default><![CDATA[['<Ctrl>6']]]></default>
+      <summary>Keybinding to switch to 6 lang</summary>
+    </key>
+    <key name="hotkey-lang-7" type="as">
+      <default><![CDATA[['<Ctrl>7']]]></default>
+      <summary>Keybinding to switch to 7 lang</summary>
+    </key>
+    <key name="hotkey-lang-8" type="as">
+      <default><![CDATA[['<Ctrl>8']]]></default>
+      <summary>Keybinding to switch to 8 lang</summary>
+    </key>
+    <key name="hotkey-lang-9" type="as">
+      <default><![CDATA[['<Ctrl>9']]]></default>
+      <summary>Keybinding to switch to 9 lang</summary>
+    </key>
+    <key name="hotkey-lang-0" type="as">
+      <default><![CDATA[['<Ctrl>0']]]></default>
+      <summary>Keybinding to switch to 0 lang</summary>
     </key>
   </schema>
 </schemalist>

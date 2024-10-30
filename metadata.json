@@ -4,6 +4,7 @@
   "uuid": "klsp@palamar.dev",
   "settings-schema": "org.gnome.shell.extensions.klsp",
   "shell-version": [
-    "46"
+    "46",
+    "47"
   ]
 }

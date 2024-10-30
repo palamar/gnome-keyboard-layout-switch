@@ -8,11 +8,35 @@ import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import {Extension, gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 
+
 export default class KlspExtension extends Extension {
     settings?: Gio.Settings
     indicator?: PanelMenu.Button
+    dbus?: 
+    screenSaver?:
+    const dbusSessionSubscription = `<node>
+        <interface name="dev.palamar.klsp">
+            <method name="reset">
+            <arg type="b" direction="out" name="success"/>
+            <arg type="s" direction="out" name="returnValue"/>
+            </method>
+        </interface>
+    </node>`;
 
     enable() {
+        this.dbus = Gio.DBusExportedObject.wrapJSObject(this.dbusSessionSubscription, this);
+        this.dbus.export(Gio.DBus.session, "/dev/palamar/klsp");
+
+        this.ScreenSaver = Gio.DBus.session.signal_subscribe(
+            null, 
+            'org.gnome.ScreenSaver', 
+            'ActiveChanged', 
+            '/org/gnome/ScreenSaver', 
+            null, 
+            Gio.DBusSignalFlags.NONE,
+            () => this.reset()
+        );
+        let sources: any = (Keyboard.getInputSourceManager()).inputSources.sort();
         this.addStatusIcon();
         this.settings = this.getSettings('org.gnome.shell.extensions.klsp');
         this.settings.settings_schema.list_keys().forEach((keyName) => {
@@ -37,18 +61,22 @@ export default class KlspExtension extends Extension {
 
     addStatusIcon() {
         // Create a panel button
-        this.indicator = new PanelMenu.Button(0.0, this.metadata.name, false);
+        this.indicator = new PanelMenu.Button(
+            0.0, 
+            this.metadata.name, 
+            false
+        );
 
         // Add an icon
         const icon = new St.Icon({
-            icon_name: 'face-laugh-symbolic',
+            icon_name: 'preferences-desktop-keyboard-shortcuts',
             style_class: 'system-status-icon',
         });
         this.indicator.add_child(icon);
 
         // Add the indicator to the panel
         Main.panel.addToStatusArea(this.uuid, this.indicator);
-        
+
         // Add a menu item to open the preferences window
         this.indicator.menu.addAction(
             'Preferences',
@@ -71,6 +99,10 @@ export default class KlspExtension extends Extension {
             (settings, key) => {
                 console.debug(`${key} = ${settings.get_value(key).print(true)}`);
         });
+    }
+
+    reset() {
+        this.activateLang('en');
     }
 
     activateLang(lang: String) {
